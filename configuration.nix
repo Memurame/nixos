@@ -97,6 +97,13 @@
     "x-scheme-handler/unknown" = "firefox.desktop";
   };
 
+  programs.git = {
+    enable = true;
+    extraConfig = {
+      safe.directory = "/etc/nixos";
+    };
+  };
+
   # VirtualBox erfordert zwingend das eigene System-Modul:
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "manfred" ];
