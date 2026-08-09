@@ -86,8 +86,10 @@
     pkgs.spotify
     pkgs.wireshark
     pkgs.vlc
-    #gnomeExtensions.dash-to-dock
+    pkgs.qFlipper
   ];
+
+  hardware.flipperzero.enable = true;
 
   xdg.mime.enable = true;
   xdg.mime.defaultApplications = {
