@@ -25,9 +25,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "de_CH.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # KDE Plasma 6
   services.xserver.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -103,7 +100,7 @@
 
   programs.git = {
     enable = true;
-    extraConfig = {
+    config = {
       safe.directory = "/etc/nixos";
     };
   };
