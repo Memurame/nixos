@@ -2,22 +2,13 @@
   description = "Manfred's NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NIXOS/nixpkgs/nixos-unstable";
-    claude-desktop.url = "github:heytcass/claude-for-linux";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, claude-desktop, ... }: {
+  outputs = { self, nixpkgs, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        ./hardware-configuration.nix
-        {
-          environment.systemPackages = [
-            claude-desktop.packages.x86_64-linux.default
-          ];
-        }
-      ];
+      modules = [ ./configuration.nix ./hardware-configuration.nix ];
     };
   };
 }
