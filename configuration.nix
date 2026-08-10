@@ -87,6 +87,7 @@
     pkgs.wireshark
     pkgs.vlc
     pkgs.qFlipper
+    pkgs.ungoogled-chromium
   ];
 
   hardware.flipperzero.enable = true;
