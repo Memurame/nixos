@@ -7,7 +7,7 @@
   ];
 
   # Host-spezifisch
-  networking.hostName = "probook";
+  networking.hostName = "nixos";
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
