@@ -71,6 +71,7 @@
     vlc
     qFlipper
     ungoogled-chromium
+    vim
   ];
 
   # Flipper Zero
