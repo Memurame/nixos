@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -11,7 +11,8 @@
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true; 
+
 
   # Diese Version nicht ändern, wenn sie deiner ursprünglichen
   # Installation entspricht.
